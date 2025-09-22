@@ -1,10 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #24252a;
+}
+
+body {
+  background-color: #c8c9cb;
 }
 
 li,
@@ -15,7 +22,7 @@ button {
   font-weight: 500;
   font-style: normal;
   font-size: 16px;
-  color: #edf0f1;
+  color: #393a3b;
   text-decoration: none;
 }
 
@@ -23,7 +30,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
+  padding: 15px 5%;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
 }
 
 .logo {
@@ -58,4 +68,62 @@ button {
 
 button:hover {
   background-color: rgba(0, 136, 169, 0.8);
+}
+
+h1 {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.motto-container {
+  overflow: hidden;
+  text-align: left;
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 50px 0;
+  gap: 40px;
+}
+
+#animated-motto {
+  font-size: 2.5rem;
+  padding-left: 20px;
+  font-weight: 600;
+  color: #000000;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 1.2s ease-out, opacity 1.5s ease-out;
+  flex: 1;
+  text-align: left;
+}
+
+#animated-about {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#animated-about {
+  flex: 1;
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #000000;
+  transform: translateX(50px);
+  opacity: 0;
+  padding-right: 5px;
+  transition: transform 1.2s ease-out, opacity 1.5s ease-out;
+}
+
+#animated-motto.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#animated-about.visible {
+  transform: translateX(0);
+  opacity: 1;
 }
