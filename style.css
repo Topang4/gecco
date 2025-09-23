@@ -11,8 +11,27 @@
 }
 
 body {
-  background-color: #c8c9cb;
-  background-image: url(/images/);
+  background-color: #dfdfdf;
+  padding-top: 80px;
+}
+
+body > *:not(header):not(#page-loader) {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+body.loaded > *:not(header):not(#page-loader) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#home,
+#projects,
+#designs,
+#about {
+  scroll-margin-top: 100px;
+  padding-top: 20px;
 }
 
 li,
@@ -28,6 +47,10 @@ button {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -127,4 +150,40 @@ h1 {
 #animated-about.visible {
   transform: translateX(0);
   opacity: 1;
+}
+
+.images-container img {
+  width: 330px;
+  height: 400px;
+  display: inline;
+  margin: 70px 20px;
+}
+
+.images-container h2 {
+  margin-left: 40%;
+  padding-top: 20px;
+  padding-bottom: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  color: #393a3b;
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #0088a9 15%,
+    #006d87 50%,
+    #0088a9 85%,
+    transparent 100%
+  );
+  margin: 20px 20px;
+  width: 98%;
+  border-radius: 1px;
 }
