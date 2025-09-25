@@ -9,8 +9,21 @@
   </head>
   <body>
     <header>
-      <img class="logo" src="./images/GECC03.png" height="25px" width=99px"
-      alt="logo" />
+      <img
+        class="logo"
+        src="./images/GECC03.png"
+        height="25px"
+        width="99px"
+        alt="logo"
+      />
+
+      <!-- Add this hamburger button -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <nav>
         <ul class="nav-links">
           <li><a href="#top">Home</a></li>
@@ -19,7 +32,7 @@
           <li><a href="#about">About Us</a></li>
         </ul>
       </nav>
-      <a class="cta" href="#"><button>Contact</button></a>
+      <a class="cta" href="#foot"><button>Contact</button></a>
     </header>
     <article>
       <div class="motto-container">
@@ -88,7 +101,97 @@
         </div>
         <button class="load-more-btn">Load More Projects</button>
       </div>
+
+      <div class="about-container" id="about">
+        <h2>About GECCO Inc.</h2>
+        <hr />
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Building Your Vision Since 2025</h3>
+            <p>
+              GECCO Inc. is a premier construction and design firm specializing
+              in transforming architectural visions into exceptional living and
+              working spaces. Our integrated approach combines innovative design
+              with precision engineering.
+            </p>
+
+            <div class="expertise-grid">
+              <div class="expertise-item">
+                <h4>🏗️ Construction Management</h4>
+                <p>
+                  End-to-end project oversight ensuring quality and timely
+                  delivery
+                </p>
+              </div>
+              <div class="expertise-item">
+                <h4>🎨 Interior Design</h4>
+                <p>
+                  Creating beautiful, functional spaces that reflect your style
+                </p>
+              </div>
+              <div class="expertise-item">
+                <h4>🏛️ Architecture</h4>
+                <p>Innovative structural design blending form and function</p>
+              </div>
+              <div class="expertise-item">
+                <h4>💻 IT Consultancy</h4>
+                <p>
+                  Technology solutions for smart buildings and digital
+                  integration
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-image">
+            <img src="./images/logo.jpeg" alt="GECCO Team" />
+          </div>
+        </div>
+      </div>
     </article>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <img src="./images/GECC03.png" alt="GECCO Logo" class="footer-logo" />
+          <p>
+            Transforming visions into reality through integrated design,
+            construction, and technology solutions.
+          </p>
+        </div>
+
+        <div class="footer-section" id="foot">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#design">Designs</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li>Interior Design</li>
+            <li>Construction Management</li>
+            <li>Architecture</li>
+            <li>IT Consultancy</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>📧 geccoincteam@gmail.com</p>
+          <p>📞 +254 9** ******</p>
+          <p>📍 TBD</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 GECCO Inc. All Rights Reserved</p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>

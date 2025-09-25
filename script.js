@@ -32,3 +32,74 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Hamburger Menu with proper closing
+const hamburger = document.getElementById("hamburger");
+let mobileMenu = null;
+
+function createMobileMenu() {
+  if (mobileMenu) return;
+
+  mobileMenu = document.createElement("div");
+  mobileMenu.className = "mobile-menu";
+  mobileMenu.innerHTML = `
+        <ul class="nav-links">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#design">Designs</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+        <a class="cta" href="#foot"><button>Contact</button></a>
+    `;
+  document.body.appendChild(mobileMenu);
+
+  // Close menu when clicking links
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", function (e) {
+      closeMobileMenu();
+    });
+  });
+}
+
+function closeMobileMenu() {
+  hamburger.classList.remove("active");
+  if (mobileMenu) {
+    mobileMenu.classList.remove("active");
+  }
+}
+
+hamburger.addEventListener("click", function (e) {
+  e.stopPropagation(); // Prevent event bubbling
+
+  createMobileMenu();
+
+  const isActive = hamburger.classList.contains("active");
+
+  if (isActive) {
+    closeMobileMenu();
+  } else {
+    hamburger.classList.add("active");
+    mobileMenu.classList.add("active");
+  }
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", function (e) {
+  if (!e.target.closest(".hamburger") && !e.target.closest(".mobile-menu")) {
+    closeMobileMenu();
+  }
+});
+
+// Close menu on escape key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeMobileMenu();
+  }
+});
+
+// Close menu on window resize
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 768) {
+    closeMobileMenu();
+  }
+});
